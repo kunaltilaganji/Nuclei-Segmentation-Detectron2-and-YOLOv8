@@ -23,11 +23,14 @@ I explored two different methods for **Nuclei Segmentation and Analysis** using 
 6. Conducted a **quantitative analysis** to compare both methods.
 
 ---
+
 ## Comparison of Results
 
-| Detectron2 (Mask R-CNN) | YOLOv8 |
-|-------------------------|--------|
-| ![Detectron2 Output](screenshot.png) | ![YOLOv8 Output](image.png) |
+### Detectron2 (Mask R-CNN)
+![Detectron2 Output](https://github.com/kunaltilaganji/Nuclei-Segmentation-Detectron2-and-YOLOv8/blob/main/images/Screenshot.png)
+
+### YOLOv8
+![YOLOv8 Output](https://github.com/kunaltilaganji/Nuclei-Segmentation-Detectron2-and-YOLOv8/blob/main/images/images.jpg)
 
 ---
 ## Conclusion
