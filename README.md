@@ -1,25 +1,42 @@
-# Nuclei-Segmentation-Detectron2-and-YOLOv8
+# Nuclei Segmentation using Detectron2 and YOLOv8
 
+## Dataset
+The dataset used for this project can be downloaded from:
+**[NuInsSeg Dataset](https://www.kaggle.com/datasets/ipateam/nuinsseg?resource=download)**
 
-Nuclei dataset can be downloaded from:**https://www.kaggle.com/datasets/ipateam/nuinsseg?resource=download
-<br>
+For a detailed dataset description, refer to the official paper:
+**[NuInsSeg: Dataset Description](https://arxiv.org/abs/2308.01760)**
 
-**Dataset description:** https://arxiv.org/abs/2308.01760
-<br>
+### Summary of the Dataset
+The **NuInsSeg** dataset contains more than **30k manually segmented nuclei** from **31 human and mouse organs** and **665 image patches** extracted from H&E-stained whole slide images. Additionally, ambiguous area masks are provided to indicate regions where manual semantic/instance segmentation was impossible.
 
-<p>
+---
+## Approach
+I explored two different methods for **Nuclei Segmentation and Analysis** using **Detectron2 (Mask R-CNN)** and **YOLOv8**.
 
-**Summary of the dataset:** <p>
-The NuInsSeg dataset contains more than *30k manually segmented nuclei from 31 human and mouse organs and 665 image patches extracted from H&E-stained whole slide images*. We also provide ambiguous area masks for the entire dataset to show which areas manual semantic/instance segmentation was impossible.
-<p>
+### Procedure:
+1. Downloaded the dataset from Kaggle.
+2. Cleaned the data and converted masks to **COCO JSON** and **YOLOv8 annotation format**.
+3. Visualized the annotations.
+4. Trained **Detectron2** using **Mask R-CNN** for object detection.
+5. Trained **YOLOv8** for segmentation.
+6. Conducted a **quantitative analysis** to compare both methods.
 
-**Human organs**
+---
+## Comparison of Results
 
-cerebellum, cerebrum (brain), colon (rectum), epiglottis, jejunum, kidney, liver, lung, melanoma, muscle, oesophagus, palatine tonsil, pancreas, peritoneum, placenta, salivary gland, spleen, stomach (cardia), stomach (pylorus), testis, tongue, umbilical cord, and urinary bladder
-<p>
+| Detectron2 (Mask R-CNN) | YOLOv8 |
+|-------------------------|--------|
+| ![Detectron2 Output](screenshot.png) | ![YOLOv8 Output](image.png) |
 
-**Mouse organs**
+---
+## Conclusion
+Upon analysis, I observed that **YOLOv8 tends to over-segment the nuclei**, whereas **Detectron2 provides more accurate segmentation** results. Further refinements can be made to improve performance, especially for challenging cases.
 
-cerebellum, cerebrum, colon, epiglottis, lung, melanoma, muscle, peritoneum, stomach (cardia), stomach (pylorus), testis, umbilical cord, and urinary bladder)
-
+---
+## Dependencies & Installation
+To run this project, install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
 

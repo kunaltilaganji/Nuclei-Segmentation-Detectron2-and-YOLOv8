@@ -1,0 +1,8 @@
+torch
+detectron2
+opencv-python
+numpy
+matplotlib
+pandas
+seaborn
+ultralytics
